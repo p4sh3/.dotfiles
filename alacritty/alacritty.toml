@@ -38,7 +38,7 @@ bindings = [
 
 [font]
 size = 11.5
-bold = {style = "Heavy"}
-bold_italic = {style = "Heavy Italic"}
-italic = {style = "Medium Italic"}
-normal = {style = "Medium"}
+bold = { family = "FiraCode Nerd Font", style = "Heavy"}
+bold_italic = { family = "FiraCode Nerd Font", style = "Heavy Italic"}
+italic = { family = "FiraCode Nerd Font", style = "Medium Italic"}
+normal = {family = "FiraCode Nerd Font", style = "Medium"}
