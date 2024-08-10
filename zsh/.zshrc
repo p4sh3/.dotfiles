@@ -14,6 +14,7 @@ HISTFILE=~/.zsh_history
 alias edit="code ~/.zshrc" # to edit
 alias refresh="source ~/.zshrc" # to refresh
 alias ll="ls -al"
+alias pn="pnpm"
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -42,4 +43,26 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/star.omp.json )"
 
+# fnm
+FNM_PATH="/home/p4sh3/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/p4sh3/.local/share/fnm:$PATH"
+  eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
+fi
 
+
+# automatically start tmux as default
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach -t default || tmux new -s default
+fi
+
+# pnpm
+export PNPM_HOME="/home/p4sh3/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
