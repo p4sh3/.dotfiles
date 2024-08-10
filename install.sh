@@ -40,6 +40,8 @@ ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 # mkdir ~/.config/alacritty
 ln -sf ~/.dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+ln -sf ~/.dotfiles/vscode/.code.css ~/.code.css
+ln -sf ~/.dotfiles/vscode/.code.js ~/.code.js
 
 
 {
