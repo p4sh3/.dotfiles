@@ -37,4 +37,6 @@ if ! curl --progress-bar -LO --output-dir ~/.config/alacritty https://github.com
     exit 1
 fi
 
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
+
 echo ""
