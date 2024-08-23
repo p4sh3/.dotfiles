@@ -29,7 +29,6 @@ bash ./fnm/install.sh
 
 # Installing tmux
 bash ./tmux/install.sh
-
 # Installing grub theme
 echo -e "\033[30;46mInstalling grub theme\033[0m"
 wget -O- https://github.com/p4sh3/fallout-grub-theme/raw/master/install.sh | bash -s -- --lang English
